@@ -1,0 +1,43 @@
+search nearby : $32 for 1k requests
+NearestRoad : $7 for 1k call
+Find Place – ID only  : Free
+
+
+
+Place Search : 
+
+name — A term to be matched against all content that Google has indexed for this place. Equivalent to keyword. The name field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the keyword parameter for all search terms.
+
+
+Find Place doesn't have place type 
+https://developers.google.com/maps/documentation/places/web-service/supported_types
+So we'll use Nearby Search, it gives alot of data and so chharges more 
+
+Nearby search example:
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=28.574334,77.353636&radius=200&type=shopping_mall&key=
+
+
+Nearby search API:
+	what it takes?
+		radius
+		coordinates
+		type (mall,school etc)
+		keyword(in it's name)
+
+
+	what it returns ?
+		business_status : closed or not
+		price_level : on scale of 5
+		ratings
+		number of ratings
+		famous place in vicinity
+
+
+Google Direction Matrix API:
+	Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.
+
+	origin-cordinates needed 
+	destination - cordinates needed
+
+
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626&key=
